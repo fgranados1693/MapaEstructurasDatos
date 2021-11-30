@@ -5,8 +5,10 @@ public class Nodo {
     // A utility function to find the vertex with minimum distance value,
     // from the set of vertices not yet included in shortest path tree
 
-    static final int V = 7;
-    private String[] nombres = {"España","Portugal","Italia","Francia","Inglaterra","Suecia","Escocia"};
+    static final int V = 25;
+    private String[] nombres = {"Canadá", "Los Angeles", "New York","México","Costa Rica","Colombia","Perú","Brasil",
+            "Argentina", "Portugal","España","Inglaterra","Francia","Italia","Alemania", "Suecia","Rusia","Egipto",
+            "India","China","Japón","Australia","Sudáfrica","Madagascar", "Nigeria"};
 
     public Nodo() {
     }
