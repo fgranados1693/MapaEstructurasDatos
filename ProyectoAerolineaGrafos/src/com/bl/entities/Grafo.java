@@ -33,8 +33,8 @@ public class Grafo {
     */
        Nodo nombre = new Nodo();
        String[] nombr = nombre.getNombres();
-        System.out.println(nombr[origen] + "  " + nombr[destino-1] + " " + dist[destino-1]);
-        System.out.println(origen+1 + " \t\t " + destino + " \t\t " + dist[destino-1]);
+        System.out.println(nombr[origen] + "   " + nombr[destino-1] + "   " + dist[destino-1]);
+        System.out.println(origen+1 + " \t\t " + destino + "      " + dist[destino-1]);
 
         /*for (int i = 0; i < V; i++)
             System.out.println(i + " \t\t " + dist[i]);
