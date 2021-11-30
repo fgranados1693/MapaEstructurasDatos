@@ -3,7 +3,11 @@ package com.bl.entities;
 import com.bl.logic.*;
 
 import static com.bl.entities.Nodo.V;
+import static com.bl.entities.Nodo.getV;
+
 import com.bl.entities.Nodo;
+
+import java.util.ArrayList;
 
 public class Grafo {
 
@@ -22,6 +26,58 @@ public class Grafo {
 
         return min_index;
     }
+
+
+    //////// Alina
+
+
+    public boolean existeArista(int graph[][], int v1, int v2) {
+        if (v1 >= V || v2 >= V) {
+            throw new ArrayIndexOutOfBoundsException(
+                    "Vertices inválidos, fuera de rango" + "nRango de vertices: 0 - " + (getV() - 1));
+        } else if (graph[v1][v2] != 0) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public void imprimirGrafo(int[][] grafo) {
+
+        for(int Linea = 0; Linea < V; ++Linea) {
+            for(int Columna = 0; Columna < grafo.length; ++Columna) {
+                System.out.print(grafo[Linea][Columna] + " ");
+                if (Columna + 1 == grafo.length) {
+                    System.out.print("|| ");
+                }
+            }
+            System.out.println("");
+        }
+
+        System.out.println("");
+    }
+
+    public void verticesAdyacentes(int[][] grafo, int vertice){
+
+        ArrayList<Integer> listaAdyacencia = new ArrayList<Integer>();
+        int cont = 0;
+
+        for(int Linea = 0; Linea < V; ++Linea) {
+            for (int Columna = 0; Columna < grafo.length; ++Columna) {
+                if (Linea == vertice) {
+                    if (grafo[vertice][Columna] != grafo[vertice][0]) {
+                        listaAdyacencia.add(Columna);
+                        System.out.println("Vértice adyancente de " + vertice + " : " + listaAdyacencia.get(cont));
+                        cont++;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /////////Alina/////////////////////////////////////////////////////////////////////////////////////////////
 
     // A utility function to print the constructed distance array
     void printSolution(int dist[],int origen, int destino)
