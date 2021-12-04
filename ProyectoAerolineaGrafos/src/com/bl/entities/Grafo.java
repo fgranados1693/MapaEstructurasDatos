@@ -3,14 +3,13 @@ package com.bl.entities;
 import com.bl.logic.*;
 
 import static com.bl.entities.Nodo.V;
+
 import com.bl.entities.Nodo;
 
 public class Grafo {
 
 
-
-    int minDistance(int dist[], Boolean sptSet[])
-    {
+    int minDistance(int dist[], Boolean sptSet[]) {
         // Initialize min value
         int min = Integer.MAX_VALUE, min_index = -1;
 
@@ -24,22 +23,14 @@ public class Grafo {
     }
 
     // A utility function to print the constructed distance array
-    void printSolution(int dist[],int origen, int destino)
-    {
+    void printSolution(int dist[], int origen, int destino) {
 
         System.out.println("Origen   Destino Distancia");
-       /* for (int i = 0; i < V; i++){
-            System.out.println(i + " \t\t " + dist[i]);
-    */
-       Nodo nombre = new Nodo();
-       String[] nombr = nombre.getNombres();
-        System.out.println(nombr[origen] + "   " + nombr[destino-1] + "   " + dist[destino-1]);
-        System.out.println(origen+1 + " \t\t " + destino + "      " + dist[destino-1]);
 
-        /*for (int i = 0; i < V; i++)
-            System.out.println(i + " \t\t " + dist[i]);
-            System.out.println(nombr);
-*/
+        Nodo nombre = new Nodo();
+        String[] nombr = nombre.getNombres();
+        System.out.println(nombr[origen] + "   " + nombr[destino - 1] + "   " + dist[destino - 1]);
+        System.out.println(origen + 1 + " \t\t " + destino + "      " + dist[destino - 1]);
 
     }
 
@@ -50,8 +41,7 @@ public class Grafo {
             System.out.println(i + " \t\t " + dist[i]);
     }*/
 
-    public void dijkstra(int graph[][], int origen, int destino)
-    {
+    public void dijkstra(int graph[][], int origen, int destino) {
         int dist[] = new int[V]; // The output array. dist[i] will hold
         // the shortest distance from src to i
 
@@ -69,7 +59,7 @@ public class Grafo {
         dist[origen] = 0;
 
         // Find shortest path for all vertices
-        for (int count = origen; count < destino- 1; count++) {
+        for (int count = origen; count < destino - 1; count++) {
             // Pick the minimum distance vertex from the set of vertices
             // not yet processed. u is always equal to src in first
             // iteration.
@@ -90,7 +80,7 @@ public class Grafo {
         }
 
         // print the constructed distance array
-        printSolution(dist,origen,destino);
+        printSolution(dist, origen, destino);
     }
 }
 

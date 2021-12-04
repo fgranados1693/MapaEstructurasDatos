@@ -1,6 +1,7 @@
 package com.bl.logic;
 
 import com.bl.entities.Grafo;
+import com.bl.entities.HashingAbierto;
 
 public class Controller {
 
@@ -38,7 +39,15 @@ public class Controller {
         };
         Grafo t = new Grafo();
         // Origen es de 0 a 6 y Destino es de 1 a 7
-        t.dijkstra(graph, 0, 21);
+        t.dijkstra(graph, 4, 9);
+
+        HashingAbierto tablaHash = new HashingAbierto(25);
+        tablaHash.insertar();
+        tablaHash.mostrarTablaHash();
+
+        String key = "Costa de Marfil";
+        System.out.println("Existe el valor "+key+": " + tablaHash.buscar(key));
+
     }
 
 }
