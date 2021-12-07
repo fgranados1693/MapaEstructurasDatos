@@ -21,15 +21,16 @@ public class Controller {
         };
         Grafo t = new Grafo();
         // Origen es de 0 a 6 y Destino es de 1 a 7
-        t.dijkstra(graph, 5, 4);
+        t.dijkstra(graph, 0, 3);
 
         //returns true when arista exists
-        imprimir("" + t.existeArista(graph, 4, 4 ));
+        imprimir("" + t.existeArista(graph, 0, 3 ));
        // t.primeroListaAdy(graph, 0);
 
         t.imprimirGrafo(graph);
         t.verticesAdyacentes(graph, 0);
     }
+
 
     private static void imprimir(String pData) {
         System.out.println(pData);
