@@ -3,9 +3,11 @@ package com.bl.logic;
 import com.bl.entities.Grafo;
 import com.bl.entities.HashingAbierto;
 
+import java.util.Scanner;
+
 public class Controller {
 
-    //PRUEBA PRUEBA
+    private static Scanner scan = new Scanner(System.in);
 
     public static void implementarTrayectoMin(){
         /* Let us create the example graph discussed above */
@@ -48,6 +50,19 @@ public class Controller {
         String key = "Costa de Marfil";
         System.out.println("Existe el valor "+key+": " + tablaHash.buscar(key));
 
+        t.dijkstra(graph, 0, 3);
+
+        //returns true when arista exists
+        imprimir("" + t.existeArista(graph, 0, 3 ));
+       // t.primeroListaAdy(graph, 0);
+
+        t.imprimirGrafo(graph);
+        t.verticesAdyacentes(graph, 0);
+    }
+
+
+    private static void imprimir(String pData) {
+        System.out.println(pData);
     }
 
 }
