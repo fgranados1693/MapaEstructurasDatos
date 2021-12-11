@@ -1,7 +1,12 @@
 package com.bl.logic;
 
+import com.bl.entities.Dijkstra;
 import com.bl.entities.Grafo;
 import com.bl.entities.HashingAbierto;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class Controller {
 
@@ -39,15 +44,56 @@ public class Controller {
         };
         Grafo t = new Grafo();
         // Origen es de 0 a 6 y Destino es de 1 a 7
-        t.dijkstra(graph, 4, 9);
+        //t.dijkstra(graph, 0, 5);
 
-        HashingAbierto tablaHash = new HashingAbierto(25);
-        tablaHash.insertar();
-        tablaHash.mostrarTablaHash();
+        //HashingAbierto tablaHash = new HashingAbierto(2);
+        //tablaHash.insertar();
+        //tablaHash.mostrarTablaHash();
 
-        String key = "Costa de Marfil";
-        System.out.println("Existe el valor "+key+": " + tablaHash.buscar(key));
+        //String key = "Costa de Marfil";
+        //System.out.println("Existe el valor "+key+": " + tablaHash.buscar(key));
+
+        // Otra implementacion
+
+        ArrayList<String> nombres = new ArrayList<String>();
+        nombres.add("Canadá");
+        nombres.add("Los Angeles");
+        nombres.add("New York");
+        nombres.add("México");
+        nombres.add("Costa Rica");
+
+        int src = 1 - 1, dest = 5 - 1;
+        Dijkstra dijkstra = new Dijkstra();
+        dijkstra.shortestPath(graph,src,dest);
+        System.out.print("Camino más corto: ");
+        System.out.println(dijkstra.path);
+        mostrarNombresCaminoCorto(dijkstra.path, nombres, src, dest);
+
+        // Imprimir nombres de los paises  *******************
+
+
+        //find2ndShortest(adjacencyMatrix,src,dest);
+
+        List<Integer> list = new ArrayList<Integer>(dijkstra.allDists);
+        System.out.println("Distancia más corta: " + list.get(0));
+        //System.out.println("2nd shortest distance: " + list.get(1));
 
     }
 
+    public static void mostrarNombresCaminoCorto(Set<Integer> path, ArrayList<String> nombresPaises, int origen, int destino) {
+
+        if(origen < destino) {
+
+            for(int i = 0; i < path.size(); i ++) {
+
+                System.out.println("País: " + nombresPaises.get(i + 1));
+            }
+        }
+        else {
+            for(int i = path.size() - 1; i >= 0; i --) {
+
+                System.out.println("País: " + nombresPaises.get(i + 1));
+            }
+        }
+    }
 }

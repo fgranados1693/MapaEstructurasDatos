@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1052.0" style="-fx-background-color: #F9F9F9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.controller.vecinosController">
+
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1052.0" layoutX="-81.0" layoutY="2.0">
+            <image>
+                <Image url="@../images/Map.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="btnMenuRuta" layoutX="691.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnRutaCortaClicked" style="-fx-background-color: TRANSPARENT;" text="RUTA MÁS CORTA">
+            <font>
+                <Font name="Bebas Neue Regular" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnMenuDestino" layoutX="808.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnBuscarDestinoClicked" style="-fx-background-color: TRANSPARENT;" text="Buscar destino">
+            <font>
+                <Font name="Bebas Neue Regular" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnMenuVecinos" layoutX="924.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnVerVecinosClicked" style="-fx-background-color: TRANSPARENT;" text=" ver vecinos">
+            <font>
+                <Font name="Bebas Neue Regular" size="18.0" />
+            </font>
+        </Button>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="470.0" layoutX="876.0" layoutY="102.0" stroke="TRANSPARENT" strokeType="INSIDE" width="155.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Rectangle>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#dea135" height="428.0" layoutX="876.0" layoutY="124.0" stroke="TRANSPARENT" strokeType="INSIDE" width="132.0" />
+        <Text layoutX="892.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCAR VECINOS" wrappingWidth="114.99999999999989">
+            <font>
+                <Font name="Bebas Neue Regular" size="36.0" />
+            </font>
+        </Text>
+        <Text fill="#333333" layoutX="895.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAÍS" wrappingWidth="60.13671875">
+            <font>
+                <Font name="Roboto Condensed Light" size="10.0" />
+            </font>
+        </Text>
+        <ChoiceBox fx:id="cboxPaisVecinos" layoutX="894.0" layoutY="237.0" prefHeight="15.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" />
+        <Button fx:id="btnBuscar" layoutX="895.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#OnBuscarVecinosClicked" style="-fx-background-color: #333333;" text="BUSCAR" textFill="WHITE">
+            <font>
+                <Font name="Bebas Neue Regular" size="12.0" />
+            </font>
+        </Button>
+        <Line endX="55.0" fill="#333333" layoutX="976.0" layoutY="459.0" startX="-100.0" stroke="#333333" strokeDashOffset="0.5" strokeLineJoin="ROUND" strokeMiterLimit="0.0" />
+        <Text fill="WHITE" layoutX="890.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESTRUCTURAS DE DATOS 2" wrappingWidth="99.13671875">
+            <font>
+                <Font name="Bebas Neue Regular" size="10.0" />
+            </font>
+        </Text>
+        <Text fill="#333333" layoutX="889.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="proyecto final" wrappingWidth="120.27343749999977">
+            <font>
+                <Font name="Bebas Neue Regular" size="18.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="30.0" fitWidth="90.0" layoutX="889.0" layoutY="508.0">
+            <image>
+                <Image url="@../images/codebar.jpeg" />
+            </image>
+        </ImageView>
+        <Text fill="#333333" layoutX="895.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VECINOS:" wrappingWidth="60.13671875">
+            <font>
+                <Font name="Roboto Condensed Light" size="10.0" />
+            </font>
+        </Text>
+        <Text fx:id="inputResultadoVecinos" fill="#333333" layoutX="896.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="costa rica perú argentina costa rica perú argentina costa rica perú argentina" wrappingWidth="60.136718749999886">
+            <font>
+                <Font name="Bebas Neue Regular" size="12.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

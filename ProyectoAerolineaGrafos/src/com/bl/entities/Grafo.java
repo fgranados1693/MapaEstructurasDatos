@@ -6,9 +6,21 @@ import static com.bl.entities.Nodo.V;
 
 import com.bl.entities.Nodo;
 
+import java.util.ArrayList;
+
 public class Grafo {
 
 
+    void printVertices(Boolean[] sptSet) {
+
+        for (int i = 0; i < sptSet.length; i++){
+
+            if(sptSet[i] == true) {
+                System.out.println("Vértice:" + (i));
+            }
+            System.out.println(sptSet[i]);
+        }
+    }
     int minDistance(int dist[], Boolean sptSet[]) {
         // Initialize min value
         int min = Integer.MAX_VALUE, min_index = -1;
@@ -43,6 +55,7 @@ public class Grafo {
 
     public void dijkstra(int graph[][], int origen, int destino) {
         int dist[] = new int[V]; // The output array. dist[i] will hold
+        //ArrayList<int> verticesRecorrido = new ArrayList<int>();
         // the shortest distance from src to i
 
         // sptSet[i] will true if vertex i is included in shortest
@@ -75,12 +88,20 @@ public class Grafo {
                 // Update dist[v] only if is not in sptSet, there is an
                 // edge from u to v, and total weight of path from src to
                 // v through u is smaller than current value of dist[v]
-                if (!sptSet[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][v] < dist[v])
+                if (!sptSet[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][v] < dist[v]) {
                     dist[v] = dist[u] + graph[u][v];
+                    System.out.println("Dist u " + dist[u]);
+                    System.out.println("V: " + (v + 1));
+                    System.out.println("U: " + (u + 1));
+                    System.out.println("Graph " + graph[u][v]);
+                    System.out.println("Suma" + (dist[u] + graph[u][v]));
+                    //verticesRecorrido.add(v);
+                }
         }
 
         // print the constructed distance array
         printSolution(dist, origen, destino);
+       // printVertices(sptSet);
     }
 }
 
