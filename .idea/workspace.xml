@@ -198,6 +198,7 @@
     <option name="width" value="694" />
     <option name="height" value="727" />
   </component>
+  <component name="ProjectId" id="21sAOfyLSpeX4CTaGxOMS2lZzUy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -284,11 +285,17 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -361,6 +368,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -375,6 +383,12 @@
       <workItem from="1638416579578" duration="1244000" />
       <workItem from="1638587946873" duration="26911000" />
       <workItem from="1638670135900" duration="69118000" />
+      <workItem from="1638670135900" duration="6941000" />
+      <workItem from="1638719435241" duration="8653000" />
+      <workItem from="1638840199391" duration="1221000" />
+      <workItem from="1638928592828" duration="982000" />
+      <workItem from="1639102495177" duration="4758000" />
+      <workItem from="1639247183752" duration="4471000" />
     </task>
     <servers />
   </component>
@@ -444,7 +458,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
