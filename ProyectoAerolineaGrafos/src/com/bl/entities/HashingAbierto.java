@@ -1,8 +1,15 @@
 package com.bl.entities;
 
+import com.bl.logic.AppController;
+
+import java.util.ArrayList;
+
 public class HashingAbierto {
     private Nodo[] tabla;
     private int cantidad;
+
+    AppController appController = new AppController();
+
 
     // Constructor
     public HashingAbierto(int tableSize) {
@@ -29,30 +36,27 @@ public class HashingAbierto {
 
 
     // Inserta un elemento
-    public void insertar() {
-
-        Nodo nombre = new Nodo();
-        String[] nombr = nombre.getNombres();
+    public void insertar(ArrayList<String> nombres) {
 
         int[] hash = new int[25];
 
-        for (int j = 0; j < nombr.length; j++) {
+        for (int j = 0; j < nombres.size(); j++) {
 
-            if (nombr[j].length()>0) {
-                hash[j] += nombr[j].charAt(0);
+            if (nombres.get(j).length()>0) {
+                hash[j] += nombres.get(j).charAt(0);
             }
-            if (nombr[j].length()>1) {
-                hash[j] += nombr[j].charAt(1);
+            if (nombres.get(j).length()>1) {
+                hash[j] += nombres.get(j).charAt(1);
             }
-            if (nombr[j].length()>4) {
-                hash[j] += nombr[j].charAt(4);
-            }
-
-            hash[j] = (hash[j]*hash[j]) - (nombr[j].length()*2);
-
+            if (nombres.get(j).length()>4) {
+                hash[j] += nombres.get(j).charAt(4);
             }
 
-        for (int j = 0; j < nombr.length; j++) {
+            hash[j] = (hash[j]*hash[j]) - (nombres.get(j).length()*2);
+
+            }
+
+        for (int j = 0; j < nombres.size(); j++) {
             int pos = funcionHash(hash[j]);
             Nodo temp = new Nodo(hash[j]);
             if (tabla[pos] == null) {

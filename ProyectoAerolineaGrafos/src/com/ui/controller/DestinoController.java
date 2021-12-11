@@ -1,8 +1,9 @@
 package com.ui.controller;
 
-import com.bl.entities.Nodo;
+import com.bl.logic.AppController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,11 +13,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class DestinoController {
+public class DestinoController implements Initializable {
 
-    Nodo nombre = new Nodo();
-    String[] nombr = nombre.getNombres();
+    AppController appController = new AppController();
 
     @FXML
     private Button btnMenuRuta;
@@ -28,7 +30,7 @@ public class DestinoController {
     private Button btnMenuVecinos;
 
     @FXML
-    private ChoiceBox<Nodo> cboxPaises;
+    private ChoiceBox<String> cboxPaises;
 
     @FXML
     private Button btnBuscar;
@@ -88,7 +90,14 @@ public class DestinoController {
         stage.show();
     }
 
-     /*private ChoiceBox<Nodo> cboxPaises = new ChoiceBox<>();
-    cboxPaises.setItems(nombr);*/
+    private void loadData(){
+
+        cboxPaises.getItems().addAll(appController.nombres);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        loadData();
+    }
 
 }
