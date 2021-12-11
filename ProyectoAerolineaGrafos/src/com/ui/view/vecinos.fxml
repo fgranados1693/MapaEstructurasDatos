@@ -74,12 +74,7 @@
                 <Image url="@../images/codebar.jpeg" />
             </image>
         </ImageView>
-        <Text fill="#333333" layoutX="895.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VECINOS:" wrappingWidth="60.13671875">
-            <font>
-                <Font name="Roboto Condensed Light" size="10.0" />
-            </font>
-        </Text>
-      <TableView fx:id="tblPaises" layoutX="893.0" layoutY="325.0" prefHeight="122.0" prefWidth="99.0" style="-fx-background-color: TRANSPARENT;">
+      <TableView fx:id="tblPaises" layoutX="894.0" layoutY="299.0" prefHeight="152.0" prefWidth="99.0" style="-fx-background-color: TRANSPARENT;">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="98.0" style="-fx-background-color: TRANSPARENT;" text="VECINOS" />
         </columns>

@@ -1,13 +1,16 @@
 package com.bl.logic;
 
+import com.bl.entities.Dijkstra;
 import com.bl.entities.Grafo;
+import com.bl.entities.HashingAbierto;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class AppController {
 
     Grafo t = new Grafo();
-    //HashingAbierto th = new HashingAbierto(25);
 
     int graph[][] = new int[][]{
             {0, 100, 150, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -90,13 +93,45 @@ public class AppController {
 
     }
 
-   /* public void tablaHash (){
-        String key = "Costa Rica";
+    public void mostrarNombresCaminoCorto(Set<Integer> path, ArrayList<String> nombresPaises, int origen, int destino) {
+
+        if(origen < destino) {
+
+            for(int i = 0; i < path.size(); i ++) {
+
+                System.out.println("País: " + nombresPaises.get(i + 1));
+            }
+        }
+        else {
+            for(int i = path.size() - 1; i >= 0; i --) {
+
+                System.out.println("País: " + nombresPaises.get(i + 1));
+            }
+        }
+    }
+
+    public void mostrarDijsktra(){
+
+        int src = 1 - 1, dest = 5 - 1;
+        Dijkstra dijkstra = new Dijkstra();
+
+        dijkstra.shortestPath(graph,src,dest);
+        System.out.print("Camino más corto: ");
+        System.out.println(dijkstra.path);
+        mostrarNombresCaminoCorto(dijkstra.path, nombres, src, dest);
+
+        //find2ndShortest(adjacencyMatrix,src,dest);
+
+        List<Integer> list = new ArrayList<Integer>(dijkstra.allDists);
+        System.out.println("Distancia más corta: " + list.get(0));
+        //System.out.println("2nd shortest distance: " + list.get(1));
+    }
+
+    public boolean tablaHash (String pais){
+        HashingAbierto th = new HashingAbierto(25);
         th.insertar(nombres);
-        th.mostrarTablaHash();
-
-        System.out.println("Existe el valor " + key + ": " + th.buscar(key));
-    }*/
-
-
+        //th.mostrarTablaHash();
+        //System.out.println("Existe el valor " + pais + ": " + th.buscar(pais));
+        return th.buscar(pais);
+    }
 }

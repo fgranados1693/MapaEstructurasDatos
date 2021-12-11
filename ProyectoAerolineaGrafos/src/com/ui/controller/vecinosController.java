@@ -118,8 +118,8 @@ public class vecinosController implements Initializable {
     @FXML
     void OnBuscarVecinosClicked(MouseEvent event) {
 
-        ArrayList<String> vecinos = pControlador.buscarVecinos(cboxPaisVecinos.getValue());
-        mostrarVecinos(vecinos);
+        ArrayList<String> listaPaises = pControlador.buscarVecinos(cboxPaisVecinos.getValue());
+        mostrarVecinos(listaPaises);
     }
 
     private void loadData(){

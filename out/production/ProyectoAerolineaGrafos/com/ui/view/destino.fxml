@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -50,7 +51,7 @@
             <Font name="Roboto Condensed Light" size="12.0" />
          </font></Text>
       <ChoiceBox fx:id="cboxPaises" layoutX="883.0" layoutY="281.0" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" />
-      <Button fx:id="btnBuscar" layoutX="883.0" layoutY="315.0" mnemonicParsing="false" style="-fx-background-color: #333333;" text="BUSCAR" textFill="WHITE">
+      <Button fx:id="btnBuscar" layoutX="883.0" layoutY="315.0" mnemonicParsing="false" onAction="#onBuscarClicked" style="-fx-background-color: #333333;" text="BUSCAR" textFill="WHITE">
          <font>
             <Font name="Bebas Neue Regular" size="12.0" />
          </font>
@@ -71,5 +72,30 @@
             <Image url="@../images/codebar.jpeg" />
          </image>
       </ImageView>
+      <Circle fx:id="dot0" fill="#dea135" layoutX="89.0" layoutY="215.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot2" fill="#dea135" layoutX="186.0" layoutY="260.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot1" fill="#dea135" layoutX="48.0" layoutY="266.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot3" fill="#dea135" layoutX="99.0" layoutY="316.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot4" fill="#dea135" layoutX="154.0" layoutY="360.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot5" fill="#dea135" layoutX="190.0" layoutY="376.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot6" fill="#dea135" layoutX="179.0" layoutY="404.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot7" fill="#dea135" layoutX="271.0" layoutY="426.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot8" fill="#dea135" layoutX="215.0" layoutY="478.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot9" fill="#dea135" layoutX="381.0" layoutY="262.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot10" fill="#dea135" layoutX="405.0" layoutY="260.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot11" fill="#dea135" layoutX="406.0" layoutY="213.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot12" fill="#dea135" layoutX="428.0" layoutY="242.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot13" fill="#dea135" layoutX="453.0" layoutY="256.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot14" fill="#dea135" layoutX="446.0" layoutY="222.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot15" fill="#dea135" layoutX="465.0" layoutY="170.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot16" fill="#dea135" layoutX="574.0" layoutY="202.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot17" fill="#dea135" layoutX="502.0" layoutY="306.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot18" fill="#dea135" layoutX="649.0" layoutY="316.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot19" fill="#dea135" layoutX="728.0" layoutY="295.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot20" fill="#dea135" layoutX="834.0" layoutY="269.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot21" fill="#dea135" layoutX="814.0" layoutY="454.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot22" fill="#dea135" layoutX="483.0" layoutY="472.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot23" fill="#dea135" layoutX="553.0" layoutY="434.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="dot24" fill="#dea135" layoutX="433.0" layoutY="358.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
     </children>
 </AnchorPane>

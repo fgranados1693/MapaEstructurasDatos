@@ -1,15 +1,10 @@
 package com.bl.entities;
 
-import com.bl.logic.AppController;
-import com.ui.controller.vecinosController;
-
 import java.util.ArrayList;
 
 import static com.bl.entities.Paises.V;
 
-
 public class Grafo {
-    private static vecinosController vController = new vecinosController();
 
     //Función vecinos
     public ArrayList<String> verticesAdyacentes(int[][] grafo, int vertice, ArrayList<String> nombresPaises) {
@@ -24,7 +19,7 @@ public class Grafo {
                     if (grafo[vertice][Columna] != grafo[vertice][0]) {
                         listaAdyacencia.add(Columna);
                         nombresPaisesVecinos.add(nombresPaises.get(listaAdyacencia.get(cont)));
-                        System.out.println("Vértice adyancente de " + nombresPaisesVecinos.get(cont));
+                        //System.out.println("Vértice adyancente de " + nombresPaisesVecinos.get(cont));
                         cont++;
                     }
                 }
