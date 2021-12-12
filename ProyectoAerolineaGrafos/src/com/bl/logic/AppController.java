@@ -93,45 +93,58 @@ public class AppController {
 
     }
 
-    public void mostrarNombresCaminoCorto(Set<Integer> path, ArrayList<String> nombresPaises, int origen, int destino) {
-
-        if(origen < destino) {
-
-            for(int i = 0; i < path.size(); i ++) {
-
-                System.out.println("País: " + nombresPaises.get(i + 1));
-            }
-        }
-        else {
-            for(int i = path.size() - 1; i >= 0; i --) {
-
-                System.out.println("País: " + nombresPaises.get(i + 1));
-            }
-        }
-    }
-
-    public void mostrarDijsktra(){
-
-        int src = 1 - 1, dest = 5 - 1;
-        Dijkstra dijkstra = new Dijkstra();
-
-        dijkstra.shortestPath(graph,src,dest);
-        System.out.print("Camino más corto: ");
-        System.out.println(dijkstra.path);
-        mostrarNombresCaminoCorto(dijkstra.path, nombres, src, dest);
-
-        //find2ndShortest(adjacencyMatrix,src,dest);
-
-        List<Integer> list = new ArrayList<Integer>(dijkstra.allDists);
-        System.out.println("Distancia más corta: " + list.get(0));
-        //System.out.println("2nd shortest distance: " + list.get(1));
-    }
-
     public boolean tablaHash (String pais){
+
         HashingAbierto th = new HashingAbierto(25);
         th.insertar(nombres);
         //th.mostrarTablaHash();
         //System.out.println("Existe el valor " + pais + ": " + th.buscar(pais));
         return th.buscar(pais);
+    }
+
+    public ArrayList<String> mostrarNombresCaminoCorto(Set<Integer> path, ArrayList<String> nombresPaises, int origen, int destino) {
+
+        ArrayList<String> nombresPaisesRuta = new ArrayList<>();
+        ArrayList<Integer> verticesCamino = new ArrayList<>(path);
+        if(origen < destino) {
+
+            for(int i = 0; i < path.size(); i ++) {
+
+                int index = verticesCamino.get(i);
+                nombresPaisesRuta.add(nombresPaises.get(index - 1));
+            }
+        }
+        else {
+            for(int i = path.size() - 1; i >= 0; i --) {
+
+                int index = verticesCamino.get(i);
+                nombresPaisesRuta.add(nombresPaises.get(index - 1));
+            }
+        }
+        return nombresPaisesRuta;
+    }
+
+    Dijkstra dijkstra = new Dijkstra();
+
+    public ArrayList<String> mostrarDijsktra(String Destino, String Origen){
+
+        int src = convertirString(Origen);
+        int dest = convertirString(Destino);
+
+        //int src = 9 - 1, dest = 17 - 1;
+
+        dijkstra.shortestPath(graph,src,dest);
+        System.out.print("Camino más corto: ");
+        System.out.println(dijkstra.path);
+        return mostrarNombresCaminoCorto(dijkstra.path, nombres, src, dest);
+
+        //find2ndShortest(adjacencyMatrix,src,dest);
+    }
+
+    public int PesoDijsktra () {
+
+        List<Integer> list = new ArrayList<Integer>(dijkstra.allDists);
+        int peso =  list.get(0);
+        return  peso;
     }
 }

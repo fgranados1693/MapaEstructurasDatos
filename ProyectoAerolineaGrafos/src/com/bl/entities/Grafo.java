@@ -19,7 +19,6 @@ public class Grafo {
                     if (grafo[vertice][Columna] != grafo[vertice][0]) {
                         listaAdyacencia.add(Columna);
                         nombresPaisesVecinos.add(nombresPaises.get(listaAdyacencia.get(cont)));
-                        //System.out.println("Vértice adyancente de " + nombresPaisesVecinos.get(cont));
                         cont++;
                     }
                 }
