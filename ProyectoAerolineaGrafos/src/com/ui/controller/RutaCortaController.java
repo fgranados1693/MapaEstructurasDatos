@@ -227,6 +227,7 @@ public class RutaCortaController implements Initializable {
     private void mostrarRuta(ArrayList<String> listaPaises) {
 
         limpiarBusqueda();
+        tblPaises.getItems().clear();
 
         for (int i = 0; i < listaPaises.size(); i++) {
 

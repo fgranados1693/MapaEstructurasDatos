@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cae7e7b-1bb1-4790-b1f3-f92dead3709d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MapaEstructurasDatos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="15012017-d5b8-4fcb-b5bc-5bb0d47dbf9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/entities/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/entities/Grafo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/logic/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/logic/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/logic/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/logic/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/DestinoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/DestinoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/vecinosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/vecinosController.java" afterDir="false" />
     </list>
@@ -23,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Alina2" />
+        <entry key="$PROJECT_DIR$" value="Alina" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,6 +64,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.app" />
@@ -108,5 +111,24 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/entities/Grafo.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/logic/AppController.java</url>
+          <line>95</line>
+          <properties class="com.bl.logic.AppController" method="tablaHash">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

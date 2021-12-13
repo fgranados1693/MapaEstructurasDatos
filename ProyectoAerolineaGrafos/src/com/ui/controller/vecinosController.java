@@ -208,6 +208,7 @@ public class vecinosController implements Initializable {
     public void mostrarVecinos(ArrayList<String> listaPaises) {
 
         limpiarBusqueda();
+        tblPaises.getItems().clear();
 
         for (int i = 0; i < listaPaises.size(); i++) {
 
