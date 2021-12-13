@@ -133,9 +133,8 @@ public class AppController {
 
         //int src = 9 - 1, dest = 17 - 1;
         limpiarPath();
+        limpiarPeso();
         dijkstra.shortestPath(graph,src,dest);
-        System.out.print("Camino más corto: ");
-        System.out.println(dijkstra.path);
         return mostrarNombresCaminoCorto(dijkstra.path, nombres, src, dest);
 
         //find2ndShortest(adjacencyMatrix,src,dest);
@@ -145,6 +144,11 @@ public class AppController {
     public void limpiarPath(){
         dijkstra.path.clear();
     }
+
+    public void limpiarPeso(){
+        dijkstra.allDists.clear();
+    }
+
     public int PesoDijsktra () {
 
         List<Integer> list = new ArrayList<Integer>(dijkstra.allDists);
