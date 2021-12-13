@@ -166,6 +166,7 @@ public class RutaCortaController implements Initializable {
 
     @FXML
     void OnRutaCortaClicked(MouseEvent event) {
+
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("../view/rutaCorta.fxml"));
@@ -206,21 +207,26 @@ public class RutaCortaController implements Initializable {
         cboxPaisesOrig.getItems().addAll(pControlador.nombres);
     }
 
-
-
     @FXML
     void onIrClicked(ActionEvent event) {
 
-        tblPaises.refresh();
+
+       // tblPaises.refresh();
+        // tblPaises.getItems().clear();
+
 
         ArrayList<String> listaPaises = pControlador.mostrarDijsktra(cboxPaisesDest.getValue(),cboxPaisesOrig.getValue());
+
         mostrarRuta(listaPaises);
         mostrarPeso();
         desplegarRuta(listaPaises);
 
+
     }
 
     private void mostrarRuta(ArrayList<String> listaPaises) {
+
+        limpiarBusqueda();
 
         for (int i = 0; i < listaPaises.size(); i++) {
 
@@ -228,6 +234,89 @@ public class RutaCortaController implements Initializable {
             this.pa.add(p);
             this.tblPaises.setItems(pa);
         }
+    }
+
+    public void limpiarBusqueda() {
+
+        String colorNormal = "#dea135";
+        double radio = 7;
+        Boolean status = true;
+
+        dot0.setVisible(status);
+        dot0.setFill(Color.web(colorNormal));
+        dot0.setRadius(radio);
+        dot1.setVisible(status);
+        dot1.setFill(Color.web(colorNormal));
+        dot1.setRadius(radio);
+        dot2.setVisible(status);
+        dot2.setFill(Color.web(colorNormal));
+        dot2.setRadius(radio);
+        dot3.setVisible(status);
+        dot3.setFill(Color.web(colorNormal));
+        dot3.setRadius(radio);
+        dot4.setVisible(status);
+        dot4.setFill(Color.web(colorNormal));
+        dot4.setRadius(radio);
+        dot5.setVisible(status);
+        dot5.setFill(Color.web(colorNormal));
+        dot5.setRadius(radio);
+        dot6.setVisible(status);
+        dot6.setFill(Color.web(colorNormal));
+        dot6.setRadius(radio);
+        dot7.setVisible(status);
+        dot7.setFill(Color.web(colorNormal));
+        dot7.setRadius(radio);
+        dot8.setVisible(status);
+        dot8.setFill(Color.web(colorNormal));
+        dot8.setRadius(radio);
+        dot9.setVisible(status);
+        dot9.setFill(Color.web(colorNormal));
+        dot9.setRadius(radio);
+        dot10.setVisible(status);
+        dot10.setFill(Color.web(colorNormal));
+        dot10.setRadius(radio);
+        dot11.setVisible(status);
+        dot11.setFill(Color.web(colorNormal));
+        dot11.setRadius(radio);
+        dot12.setVisible(status);
+        dot12.setFill(Color.web(colorNormal));
+        dot12.setRadius(radio);
+        dot13.setVisible(status);
+        dot13.setFill(Color.web(colorNormal));
+        dot13.setRadius(radio);
+        dot14.setVisible(status);
+        dot14.setFill(Color.web(colorNormal));
+        dot14.setRadius(radio);
+        dot15.setVisible(status);
+        dot15.setFill(Color.web(colorNormal));
+        dot15.setRadius(radio);
+        dot16.setVisible(status);
+        dot16.setFill(Color.web(colorNormal));
+        dot16.setRadius(radio);
+        dot17.setVisible(status);
+        dot17.setFill(Color.web(colorNormal));
+        dot17.setRadius(radio);
+        dot18.setVisible(status);
+        dot18.setFill(Color.web(colorNormal));
+        dot18.setRadius(radio);
+        dot19.setVisible(status);
+        dot19.setFill(Color.web(colorNormal));
+        dot19.setRadius(radio);
+        dot20.setVisible(status);
+        dot20.setFill(Color.web(colorNormal));
+        dot20.setRadius(radio);
+        dot21.setVisible(status);
+        dot21.setFill(Color.web(colorNormal));
+        dot21.setRadius(radio);
+        dot22.setVisible(status);
+        dot22.setFill(Color.web(colorNormal));
+        dot22.setRadius(radio);
+        dot23.setVisible(status);
+        dot23.setFill(Color.web(colorNormal));
+        dot23.setRadius(radio);
+        dot24.setVisible(status);
+        dot24.setFill(Color.web(colorNormal));
+        dot24.setRadius(radio);
     }
 
     public void mostrarPeso (){

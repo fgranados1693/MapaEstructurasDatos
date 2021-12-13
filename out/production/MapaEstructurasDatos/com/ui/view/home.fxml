@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1052.0" style="-fx-background-color: #F9F9F9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.controller.HomeController">
+
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1052.0" layoutX="-81.0" layoutY="2.0">
+         <image>
+            <Image url="@../images/Map.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnMenuRuta" layoutX="691.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnRutaCortaClicked" style="-fx-background-color: TRANSPARENT;" text="RUTA MÁS CORTA">
+         <font>
+            <Font name="Bebas Neue Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnMenuDestino" layoutX="808.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnBuscarDestinoClicked" style="-fx-background-color: TRANSPARENT;" text="Buscar destino">
+         <font>
+            <Font name="Bebas Neue Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnMenuVecinos" layoutX="924.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnVerVecinosClicked" style="-fx-background-color: TRANSPARENT;" text=" ver vecinos">
+         <font>
+            <Font name="Bebas Neue Regular" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
