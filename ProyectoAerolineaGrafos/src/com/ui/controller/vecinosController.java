@@ -29,6 +29,10 @@ public class vecinosController implements Initializable {
 
     private AppController pControlador = new AppController();
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     @FXML
     private Button btnMenuRuta;
 
@@ -138,57 +142,32 @@ public class vecinosController implements Initializable {
     }
 
     @FXML
-    void OnBuscarDestinoClicked(MouseEvent event) {
+    void OnBuscarDestinoClicked(MouseEvent event) throws IOException {
 
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("../view/destino.fxml"));
-            ((Node) event.getSource()).getScene().getWindow().hide();//Esconde la ventana actual
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
+        root = FXMLLoader.load(getClass().getResource("../view/destino.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.setUserData(scene);
         stage.show();
     }
 
     @FXML
-    void OnRutaCortaClicked(MouseEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("../view/rutaCorta.fxml"));
-            ((Node) event.getSource()).getScene().getWindow().hide();//Esconde la ventana actual
+    void OnRutaCortaClicked(MouseEvent event) throws IOException {
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
+        root = FXMLLoader.load(getClass().getResource("../view/rutaCorta.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.setUserData(scene);
         stage.show();
     }
 
     @FXML
-    void OnVerVecinosClicked(MouseEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("../view/vecinos.fxml"));
-            ((Node) event.getSource()).getScene().getWindow().hide();//Esconde la ventana actual
+    void OnVerVecinosClicked(MouseEvent event) throws IOException {
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
+        root = FXMLLoader.load(getClass().getResource("../view/vecinos.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.setUserData(scene);
         stage.show();
     }
 
@@ -213,7 +192,7 @@ public class vecinosController implements Initializable {
             this.pa.add(p);
             this.tblPaises.setItems(pa);
 
-            //System.out.println(listaPaises.get(i));
+            System.out.println(listaPaises.get(i));
         }
     }
 
