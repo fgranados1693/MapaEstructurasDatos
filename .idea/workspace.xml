@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/bl/entities/Grafo.java" description="nombresPaisesVecinos.add(nombresPaises.get(listaAd..." line="20" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4c2d55-1177-46f2-aa92-6f4334273218" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/DestinoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/DestinoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/vecinosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/vecinosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/view/destino.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/view/destino.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/view/vecinos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/view/vecinos.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="4b4c2d55-1177-46f2-aa92-6f4334273218" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +87,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2511">
+            <state relative-caret-position="-2052">
               <caret line="175" column="72" lean-forward="true" selection-start-line="175" selection-start-column="72" selection-end-line="175" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -162,10 +154,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="12" />
-    <option name="width" value="1345" />
-    <option name="height" value="727" />
+    <option name="x" value="1404" />
+    <option name="y" value="42" />
+    <option name="width" value="1271" />
+    <option name="height" value="667" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -321,12 +313,12 @@
       <workItem from="1638416579578" duration="1244000" />
       <workItem from="1638587946873" duration="26911000" />
       <workItem from="1638670135900" duration="99308000" />
-      <workItem from="1639347251616" duration="3048000" />
+      <workItem from="1639347251616" duration="3144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135442000" />
+    <option name="totallyTimeSpent" value="135538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="12" width="1345" height="727" extended-state="0" />
@@ -618,7 +610,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoAerolineaGrafos/src/com/ui/controller/RutaCortaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2511">
+        <state relative-caret-position="-2052">
           <caret line="175" column="72" lean-forward="true" selection-start-line="175" selection-start-column="72" selection-end-line="175" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
