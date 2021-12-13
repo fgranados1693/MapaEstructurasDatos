@@ -40,7 +40,7 @@ public class ConsoleController {
         };
 
         //FUNCIÓN HASH
-      HashingAbierto tablaHash = new HashingAbierto(25);
+      /*HashingAbierto tablaHash = new HashingAbierto(25);
         String key = "Costa Rica";
         tablaHash.insertar(appController.nombres);
         tablaHash.mostrarTablaHash();
@@ -50,10 +50,15 @@ public class ConsoleController {
 
         //PROBAR LISTA DE PAISES
 
-
+*/
 
         //FUNCIÓN VECINOS
-        //t.verticesAdyacentes(graph, 4);
+        System.out.println( t.verticesAdyacentes(graph, 0, appController.nombres));
+        System.out.println( t.verticesAdyacentes(graph, 1, appController.nombres));
+        System.out.println( t.verticesAdyacentes(graph, 2, appController.nombres));
+        System.out.println( t.verticesAdyacentes(graph, 4, appController.nombres));
+
+
     }
 
 }

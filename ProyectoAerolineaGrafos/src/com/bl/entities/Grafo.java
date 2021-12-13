@@ -6,6 +6,35 @@ import static com.bl.entities.Paises.V;
 
 public class Grafo {
 
+    int [][] grafo2  = new int[][]{
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0},
+            {0,0}
+
+    };
+
     //Función vecinos
     public ArrayList<String> verticesAdyacentes(int[][] grafo, int vertice, ArrayList<String> nombresPaises) {
 
@@ -13,10 +42,11 @@ public class Grafo {
         ArrayList<String> nombresPaisesVecinos = new ArrayList<>();
 
         int cont = 0;
+
         for (int Linea = 0; Linea < V; ++Linea) {
             for (int Columna = 0; Columna < grafo.length; ++Columna) {
                 if (Linea == vertice) {
-                    if (grafo[vertice][Columna] != grafo[vertice][0]) {
+                    if (grafo[vertice][Columna] != grafo2[vertice][0]) {
                         listaAdyacencia.add(Columna);
                         nombresPaisesVecinos.add(nombresPaises.get(listaAdyacencia.get(cont)));
                         cont++;
@@ -28,3 +58,4 @@ public class Grafo {
        return nombresPaisesVecinos;
     }
 }
+
